@@ -1,0 +1,428 @@
+/* Общие стили и сброс параметров */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    background-color: #f9f9f9;
+    color: #333;
+    line-height: 1.6;
+}
+
+.container {
+    width: 100%;
+    max-width: 1100px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* Секция Hero (Главный баннер) */
+.hero {
+    background-color: #FFEB3B; /* Фирменный желтый цвет приложения */
+    padding: 60px 0;
+    text-align: center;
+}
+
+.hero-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .hero-container {
+        flex-direction: row;
+        text-align: left;
+        justify-content: space-around;
+    }
+}
+
+.app-logo {
+    width: 220px;
+    height: 220px;
+    object-fit: contain;
+    filter: drop-shadow(0 10px 20px rgba(0,0,0,0.15));
+}
+
+.hero-text h1 {
+    font-size: 2.8rem;
+    color: #0D47A1; /* Контрастный глубокий синий */
+    margin-bottom: 15px;
+    font-weight: 800;
+}
+
+.hero-text .subtitle {
+    font-size: 1.3rem;
+    color: #1565C0;
+    margin-bottom: 30px;
+    max-width: 600px;
+}
+
+/* Надежный вертикальный контейнер для кнопки и ссылки */
+.hero-actions {
+    display: flex;
+    flex-direction: column;
+    align-items: center; /* Центрирует элементы на смартфонах */
+    gap: 15px;
+    margin-top: 25px;
+}
+
+@media (min-width: 768px) {
+    .hero-actions {
+        align-items: flex-start; /* Выравнивает по левому краю на ПК */
+    }
+}
+
+/* Кнопка RuStore */
+.btn-rustore {
+    display: inline-flex;
+    align-items: center;
+    background-color: #0C54A0; /* Синий цвет бренда RuStore */
+    color: #ffffff;
+    text-decoration: none;
+    padding: 12px 28px;
+    border-radius: 12px;
+    box-shadow: 0 4px 15px rgba(12, 84, 160, 0.3);
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn-rustore:hover {
+    background-color: #0A4380;
+    transform: translateY(-2px);
+}
+
+.btn-icon {
+    font-size: 2rem;
+    margin-right: 12px;
+}
+
+.btn-text {
+    display: flex;
+    flex-direction: column;
+    text-align: left;
+}
+
+.btn-text small {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.5px;
+    opacity: 0.8;
+}
+
+.btn-text strong {
+    font-size: 1.3rem;
+    line-height: 1.2;
+}
+
+/* Ссылка на инструкцию под синей кнопкой */
+.link-instruction {
+    display: inline-flex;
+    flex-direction: column;
+    align-items: center;
+    text-decoration: none;
+    padding: 8px 16px;
+    border-radius: 10px;
+    transition: background-color 0.2s;
+    
+    /* Аккуратный сдвиг вправо, чтобы надпись не прилипала к краю */
+    margin-left: 5px; 
+}
+
+@media (min-width: 768px) {
+    .link-instruction {
+        align-items: flex-start; /* На ПК выравнивает тексты внутри ссылки по левому краю */
+    }
+}
+
+.link-instruction:hover {
+    background-color: rgba(13, 71, 161, 0.06); /* Мягкий фон при наведении */
+}
+
+/* Маленькая верхняя подпись "КАК ЭТО РАБОТАЕТ?" */
+.link-hint {
+    font-size: 0.85rem; 
+    letter-spacing: 1px;
+    color: #475569;
+    text-transform: uppercase;
+    font-weight: 700;
+    margin-bottom: 4px;
+}
+
+/* Главная надпись "Инструкция" */
+.link-title {
+    font-size: 1.4rem; 
+    font-weight: 700;
+    color: #0D47A1;
+    border-bottom: 2px solid #0D47A1; /* Красивое подчеркивание */
+    padding-bottom: 2px;
+}
+
+.link-instruction:hover .link-title {
+    color: #1565C0;
+    border-color: #1565C0;
+}
+
+/* Секция преимуществ (Features) */
+.features {
+    padding: 80px 0;
+    background-color: #ffffff;
+}
+
+.features h2 {
+    text-align: center;
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 50px;
+}
+
+.features-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 30px;
+}
+
+@media (min-width: 768px) {
+    .features-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.feature-card {
+    background-color: #f8fafc;
+    padding: 30px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    transition: box-shadow 0.3s;
+}
+
+.feature-card:hover {
+    box-shadow: 0 10px 25px rgba(0,0,0,0.05);
+}
+
+.feature-icon {
+    font-size: 2.5rem;
+    margin-bottom: 15px;
+}
+
+.feature-card h3 {
+    font-size: 1.4rem;
+    color: #0D47A1;
+    margin-bottom: 10px;
+}
+
+.feature-card p {
+    color: #555;
+    font-size: 1rem;
+}
+
+/* Секция галереи */
+.gallery {
+    padding: 80px 0;
+    background-color: #f1f5f9;
+    text-align: center;
+}
+
+.gallery h2 {
+    font-size: 2rem;
+    color: #222;
+    margin-bottom: 10px;
+}
+
+.gallery-subtitle {
+    color: #64748b;
+    font-size: 1.1rem;
+    margin-bottom: 50px;
+}
+
+.gallery-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 40px;
+    justify-items: center;
+}
+
+@media (min-width: 576px) {
+    .gallery-grid {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+@media (min-width: 992px) {
+    .gallery-grid {
+        grid-template-columns: repeat(3, 1fr);
+    }
+}
+
+.gallery-item {
+    width: 100%;
+    max-width: 280px; /* Ограничение ширины макета телефона на экране */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+/* Корпус Android-смартфона */
+.phone-mockup {
+    position: relative;
+    width: 100%;
+    background-color: #1e293b; /* Матовый темно-серый цвет рамки */
+    padding: 12px; /* Одинаковая толщина боковых рамок */
+    border-radius: 36px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.12), 0 5px 15px rgba(0, 0, 0, 0.08);
+    border: 1px solid #334155;
+}
+
+/* Боковые физические кнопки на корпусе смартфона */
+.phone-mockup::before, .phone-mockup::after {
+    content: '';
+    position: absolute;
+    left: -3px;
+    background-color: #0f172a;
+    width: 3px;
+    border-radius: 2px 0 0 2px;
+}
+/* Кнопка блокировки экрана */
+.phone-mockup::before {
+    top: 80px;
+    height: 40px;
+}
+/* Качелька громкости */
+.phone-mockup::after {
+    top: 140px;
+    height: 65px;
+}
+
+/* Фронтальная камера-точка по центру дисплея */
+.phone-camera {
+    position: absolute;
+    top: 4px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 8px;
+    height: 8px;
+    background-color: #0f172a;
+    border-radius: 50%;
+    z-index: 10;
+}
+
+/* Дисплей внутри рамки */
+.phone-screen {
+    width: 100%;
+    overflow: hidden;
+    border-radius: 26px; /* Аккуратное закругление самого экрана */
+    background-color: #e2e8f0;
+}
+
+.phone-screen img {
+    width: 100%;
+    height: auto;
+    display: block;
+    aspect-ratio: 1080 / 2400; /* Идеальное соотношение сторон 9:20 под разрешение ваших скриншотов */
+    object-fit: cover;
+}
+
+.gallery-caption {
+    margin-top: 20px;
+    font-size: 0.95rem;
+    color: #334155;
+    font-weight: 600;
+}
+
+/* Страница подробной инструкции (instruction.html) */
+.instruction-page {
+    background-color: #f8fafc;
+}
+
+.page-content {
+    max-width: 800px;
+    padding: 40px 20px;
+}
+
+.btn-back {
+    display: inline-block;
+    color: #0D47A1;
+    text-decoration: none;
+    font-weight: 600;
+    margin-bottom: 30px;
+    transition: color 0.2s;
+}
+
+.btn-back:hover {
+    color: #1565C0;
+    text-decoration: underline;
+}
+
+.instruction-main {
+    background: #ffffff;
+    padding: 40px;
+    border-radius: 24px;
+    box-shadow: 0 10px 30px rgba(0,0,0,0.04);
+    border: 1px solid #e2e8f0;
+}
+
+.instruction-main h1 {
+    font-size: 2.2rem;
+    color: #0D47A1;
+    margin-bottom: 10px;
+}
+
+.instruction-lead {
+    font-size: 1.1rem;
+    color: #64748b;
+    margin-bottom: 40px;
+    border-bottom: 2px solid #f1f5f9;
+    padding-bottom: 20px;
+}
+
+.ins-section {
+    margin-bottom: 40px;
+}
+
+.ins-section h2 {
+    font-size: 1.5rem;
+    color: #1e293b;
+    margin-bottom: 20px;
+    background: #f1f5f9;
+    padding: 8px 16px;
+    border-radius: 8px;
+}
+
+.ins-section h3 {
+    font-size: 1.15rem;
+    color: #0D47A1;
+    margin: 20px 0 10px 0;
+}
+
+.ins-section ul {
+    padding-left: 20px;
+    margin-bottom: 15px;
+}
+
+.ins-section li {
+    margin-bottom: 8px;
+    color: #334155;
+}
+
+/* Футер (Подвал сайта) */
+.footer {
+    background-color: #222;
+    color: #aaa;
+    padding: 40px 0;
+    text-align: center;
+    font-size: 0.9rem;
+}
+
+.footer a {
+    color: #fff;
+    text-decoration: none;
+    margin-top: 10px;
+    display: inline-block;
+}
+
+.footer a:hover {
+    text-decoration: underline;
+}
