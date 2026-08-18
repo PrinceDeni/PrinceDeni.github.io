@@ -5,19 +5,22 @@
  <meta name="viewport" content="width=device-width, initial-scale=1.0">
  <title>Таблица Умножения — Умный тренажер для детей</title>
  <link rel="stylesheet" href="style.css">
-
+ <!-- Для всех современных браузеров (высокое качество) -->
+  <link rel="icon" href="favicon.svg" type="image/svg+xml">
+  
+  <!-- Запасной вариант для старых систем (максимальная совместимость) -->
+  <link rel="alternate icon" href="favicon.ico" type="image/x-icon">
  <!-- Yandex.Metrika counter -->
  <script type="text/javascript">
-    (function(m,e,t,r,i,k,a){
-        m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
-        m[i].l=1*new Date();
-        for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
-        k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
-    })(window, document,'script','https://mc.yandex.ru/metrika/tag.js?id=111049678', 'ym');
-
-    ym(111049678, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer: document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
+ (function(m,e,t,r,i,k,a){
+ m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+ m[i].l=1*new Date();
+ for (var j = 0; j < document.scripts.length; j++) {if (document.scripts[j].src === r) { return; }}
+ k=e.createElement(t),a=e.getElementsByTagName(t),k.async=1,k.src=r,a.parentNode.insertBefore(k,a)
+ })(window, document,'script','https://yandex.ru', 'ym');
+ ym(111049678, 'init', {ssr:true, webvisor:true, clickmap:true, ecommerce:"dataLayer", referrer:document.referrer, url: location.href, accurateTrackBounce:true, trackLinks:true});
  </script>
- <noscript><div><img src="https://mc.yandex.ru/watch/111049678" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+ <noscript><div><img src="https://yandex.ru" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
  <!-- /Yandex.Metrika counter -->
 </head>
 <body>
@@ -25,71 +28,92 @@
  <header class="hero">
  <div class="container hero-container">
  <div class="hero-image">
- <img src="logo.png" alt="Логотип Таблица Умножения 2х2" class="app-logo">
+ <img src="images/logo.webp" alt="Логотип Таблица Умножения 2х2" class="app-logo">
  </div>
  <div class="hero-text">
  <h1>Таблица Умножения</h1>
  <p class="subtitle">Легкий способ выучить таблицу умножения без зубрежки!</p>
- 
  <div class="hero-actions">
- <!-- Главная кнопка RuStore с вашим трекером -->
- <a href="https://www.rustore.ru/catalog/app/ru.ibragimov.mathtableapp" target="_blank" class="btn-rustore" onclick="ym(111049678, 'reachGoal', 'rustore_click'); return true;">
- <span class="btn-icon"></span>
- <span class="btn-text">
- <small>Доступно в</small>
- <strong>RuStore</strong>
- </span>
- </a>
- <!-- Аккуратный блок инструкции с вашим трекером -->
- <a href="instruction.html" class="link-instruction" onclick="ym(111049678, 'reachGoal', 'instruction_click'); return true;">
- <small class="link-hint">КАК ЭТО РАБОТАЕТ?</small>
- <span class="link-title"> Инструкция</span>
- </a>
+   <!-- Главная кнопка RuStore -->
+   <a href="https://www.rustore.ru/catalog/app/ru.ibragimov.mathtableapp" target="_blank" class="btn-rustore" onclick="ym(111049678, 'reachGoal', 'rustore_click'); return true;">
+     <span class="btn-icon"></span>
+     <span class="btn-text">
+       <small>Доступно в</small>
+       <strong>RuStore</strong>
+     </span>
+   </a>
+   <!-- Блок инструкции -->
+   <a href="instruction.html" class="link-instruction" onclick="ym(111049678, 'reachGoal', 'instruction_click'); return true;">
+     <small class="link-hint">КАК ЭТО РАБОТАЕТ?</small>
+     <span class="link-title">Инструкция</span>
+   </a>
+ </div>
  </div>
  </div>
  </header>
+
  <!-- Раздел с преимуществами -->
  <section class="features">
  <div class="container">
  <h2>Почему дети и родители выбирают наше приложение?</h2>
  <div class="features-grid">
- 
- <div class="feature-card">
- <div class="feature-icon"> </div>
- <h3>Визуальное запоминание</h3>
- <p>Методика суггестологии: скоростное «мигание» примеров на экране (от 100 мс) для мгновенного закрепления материала в подсознании.</p>
- </div>
- <div class="feature-card">
- <div class="feature-icon"> </div>
- <h3>Голосовой тренинг</h3>
- <p>Полностью бесконтактный режим интерактивного диалога. Ребенок слушает пример и отвечает голосом в микрофон смартфона.</p>
- </div>
- <div class="feature-card">
- <div class="feature-icon"></div>
- <h3>Умная проверка знаний</h3>
- <p>Тесты с уникальной механикой «Нет правильного ответа» в 20% случаев, развивающей предельную внимательность у ребенка.</p>
- </div>
- <div class="feature-card">
- <div class="feature-icon"></div>
- <h3>Раздельные профили</h3>
- <p>Создавайте неограниченное количество профилей учеников с индивидуальным сохранением настроек и статистики успеваемости.</p>
- </div>
+   <!-- Карточка 1 -->
+   <div class="feature-card">
+     <div class="feature-icon">👁️</div>
+     <h3>Визуальное запоминание</h3>
+     <p>Метотика суггестологии: скоростное «мигание» примеров на экране (от 100 мс) для мгновенного закрепления материала в подсознании.</p>
+   </div>
+
+   <!-- Карточка 2 -->
+   <div class="feature-card">
+     <div class="feature-icon">🎙️</div>
+     <h3>Голосовой тренинг</h3>
+     <p>Полностью бесконтактный режим интерактивного диалога. Ребенок слушает пример и отвечает голосом в микрофон смартфона.</p>
+   </div>
+
+   <!-- Карточка 3 -->
+   <div class="feature-card">
+     <div class="feature-icon">🧠</div>
+     <h3>Умная проверка знаний</h3>
+     <p>Тесты с уникальной механикой «Нет правильного ответа» в 20% случаев, развивающей предельную внимательность у ребенка.</p>
+   </div>
+
+   <!-- Карточка 4 -->
+   <div class="feature-card">
+     <div class="feature-icon">👥</div>
+     <h3>Раздельные профили</h3>
+     <p>Создавайте до пяти профилей учеников с индивидуальным сохранением настроек и статистики успеваемости.</p>
+   </div>
+
+   <!-- НОВЫЙ БЛОК 5: Капибара -->
+   <div class="feature-card">
+     <img src="images/capy_talk_01.webp" alt="Помощник Капибара" class="capybara-icon">
+     <h3>Живой голос Капибары</h3>
+     <p>Занятия ведет интерактивный помощник! Капибара общается живым мультяшным голосом, хвалит за успехи и синхронно двигает ртом в такт речи.</p>
+   </div>
+
+   <!-- НОВЫЙ БЛОК 6: Надежность -->
+   <div class="feature-card">
+     <div class="feature-icon">⚡</div>
+     <h3>Скорость и надежность</h3>
+     <p>Оптимизированный молниеносный запуск приложения без лишних пауз. Идеальная стабильность работы, чтобы ничто не отвлекало ребенка от учебы.</p>
+   </div>
  </div>
  </div>
  </section>
+
  <!-- Раздел галереи с рамками Android -->
  <section class="gallery">
  <div class="container">
  <h2>Интерфейс приложения</h2>
- <p class="gallery-subtitle">Посмотрите, как выглядит процесс обучения изнутри</p>
+ <p class="gallery-subtitle">Посмотрите, как выглядит процесс обучение изнутри</p>
  <div class="gallery-grid">
- 
  <!-- Смартфон 1 -->
  <div class="gallery-item">
  <div class="phone-mockup">
  <div class="phone-camera"></div>
  <div class="phone-screen">
- <img src="screen1.jpg" alt="Главный экран приложения">
+ <img src="images/screen1.webp" alt="Главный экран приложения">
  </div>
  </div>
  <p class="gallery-caption">Главное меню</p>
@@ -99,7 +123,7 @@
  <div class="phone-mockup">
  <div class="phone-camera"></div>
  <div class="phone-screen">
- <img src="screen2.jpg" alt="Игровой процесс обучения">
+ <img src="images/screen2.webp" alt="Игровой процесс обучения">
  </div>
  </div>
  <p class="gallery-caption">Настройки</p>
@@ -109,7 +133,7 @@
  <div class="phone-mockup">
  <div class="phone-camera"></div>
  <div class="phone-screen">
- <img src="screen3.jpg" alt="Экран наград и достижений">
+ <img src="images/screen3.webp" alt="Экран наград и достижений">
  </div>
  </div>
  <p class="gallery-caption">Статистика успеха ребенка</p>
@@ -117,12 +141,26 @@
  </div>
  </div>
  </section>
+
  <!-- Подвал сайта -->
  <footer class="footer">
- <div class="container">
- <p>&copy; 2026 Таблица Умножения. Все права защищены.</p>
- <!-- Ссылка политики конфиденциальности с вашим трекером -->
- <p><a href="privacy.html" onclick="ym(111049678, 'reachGoal', 'privacy_click'); return true;">Политика конфиденциальности</a></p>
+ <div class="container footer-container">
+ <div class="footer-info">
+   <p>&copy; 2026 Таблица Умножения. Все права защищены.</p>
+   <p><a href="privacy.html" onclick="ym(111049678, 'reachGoal', 'privacy_click'); return true;">Политика конфиденциальности</a></p>
+ </div>
+ <!-- Кнопка ВКонтакте -->
+ <a href="https://vk.ru/club240503288" target="_blank" class="btn-vk">
+   <span class="btn-vk-icon">
+     <svg viewBox="0 0 24 24" width="24" height="24" fill="currentColor" xmlns="http://w3.org">
+       <path d="M15.925 2H8.075C4.72 2 2 4.72 2 8.075v7.85C2 19.28 4.72 22 8.075 22h7.85C19.28 22 22 19.28 22 15.925V8.075C22 4.72 19.28 2 15.925 2ZM17.74 13.06c.45.43.93.83 1.34 1.3.4.45.77.93 1.05 1.47.26.5-.04 1.1-.6 1.11h-2.12c-.52 0-.96-.18-1.32-.57-.33-.36-.63-.76-.94-1.14-.15-.19-.3-.38-.5-.5-.28-.17-.5-.09-.64.19-.15.31-.22.65-.24 1-.03.43-.3.8-.75.87-.93.14-1.83-.02-2.7-.42-1.46-.66-2.58-1.74-3.53-2.99a19.78 19.78 0 0 1-2.9-5.1c-.13-.37.03-.66.42-.67h2.13c.35 0 .6.17.72.5.42 1.13.98 2.18 1.7 3.12.18.23.38.45.62.6.24.16.44.07.54-.2.13-.34.19-.7.21-1.07.03-.68-.14-1.28-.62-1.76-.23-.23-.19-.34.12-.34h3.33c.38 0 .66.21.73.6v3.2c-.03.35.12.68.45.8.27.1.48-.05.65-.24a13.3 13.3 0 0 0 1.55-2.27c.23-.44.4-.9.52-1.38.07-.3.26-.46.57-.46h2.15c.67 0 .82.35.53.9-.3.57-.7 1.1-1.12 1.6-.46.54-.95 1.05-1.46 1.55-.42.42-.43.68-.02 1.12Z"/>
+     </svg>
+   </span>
+   <span class="btn-text">
+     <small>Мы в</small>
+     <strong>ВКонтакте</strong>
+   </span>
+ </a>
  </div>
  </footer>
 </body>
